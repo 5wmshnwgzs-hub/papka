@@ -127,15 +127,15 @@ main{padding:0 16px}
 /* ---------- папки ---------- */
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:27px 11px;margin-top:16px}
 .grid.focused .fold:not(.open){opacity:.44;transform:scale(.965)}
-.fold{position:relative;color:#fff;background:var(--c);border-radius:3px 20px 20px 20px;
-  box-shadow:var(--tile-shadow);
+.fold{position:relative;color:#fff;background:var(--c);border-radius:4px 20px 20px 20px;
+  box-shadow:var(--tile-shadow),inset 0 1.5px 0 rgba(255,255,255,.20);
   transition:opacity .34s cubic-bezier(.22,1,.36,1),transform .34s cubic-bezier(.22,1,.36,1)}
-.fold::before{content:"";position:absolute;top:-12px;left:0;width:52%;max-width:84px;height:12px;
-  border-radius:8px 8px 0 0;background:var(--c);box-shadow:inset 0 0 0 99px rgba(0,0,0,.06)}
+.fold::before{content:"";position:absolute;top:-11px;left:0;width:52%;max-width:86px;height:20px;
+  border-radius:8px 10px 0 0;background:var(--c);
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.20)}
 .fold::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:linear-gradient(152deg,rgba(255,255,255,.20),rgba(255,255,255,0) 56%)}
+  background:linear-gradient(180deg,rgba(255,255,255,0) 52%,rgba(0,0,0,.07))}
 .fold.pale{color:rgba(0,0,0,.88)}
-.fold.pale::before{box-shadow:inset 0 0 0 99px rgba(0,0,0,.05)}
 .fold.open{grid-column:1/-1;box-shadow:var(--shadow-2),var(--tile-shadow)}
 .fold-head{display:block;width:100%;text-align:left;padding:15px 16px 16px;position:relative;z-index:1;color:inherit}
 .fold-head:active{opacity:.86}
@@ -196,9 +196,9 @@ main{padding:0 16px}
 .li input.f{width:106px;text-align:right;font-size:16px;font-variant-numeric:tabular-nums;color:var(--label)}
 .note{font-size:12.5px;line-height:1.5;color:var(--label-3);padding:9px 6px 0}
 .note b{color:var(--label-2);font-weight:590}
-.fw{position:relative;width:16px;height:19px;border-radius:1px 4px 4px 4px;background:var(--c);flex:none}
-.fw::before{content:"";position:absolute;top:-3px;left:0;width:8px;height:4px;
-  border-radius:2px 2px 0 0;background:var(--c);filter:brightness(.88)}
+.fw{position:relative;width:16px;height:19px;border-radius:2px 5px 5px 5px;background:var(--c);flex:none}
+.fw::before{content:"";position:absolute;top:-3px;left:0;width:8px;height:6px;
+  border-radius:2px 3px 0 0;background:var(--c)}
 
 /* ---------- контролы ---------- */
 .seg{display:flex;background:var(--surface-2);border-radius:11px;padding:2px;gap:2px}
@@ -239,8 +239,8 @@ main{padding:0 16px}
 .empty{text-align:center;padding:56px 24px}
 .empty .fo{width:64px;height:52px;margin:0 auto 18px;position:relative;
   border-radius:2px 12px 12px 12px;background:var(--surface-2)}
-.empty .fo::before{content:"";position:absolute;top:-8px;left:0;width:30px;height:9px;
-  border-radius:5px 5px 0 0;background:var(--surface-2)}
+.empty .fo::before{content:"";position:absolute;top:-8px;left:0;width:32px;height:14px;
+  border-radius:5px 6px 0 0;background:var(--surface-2)}
 .empty h3{margin:0 0 6px;font-size:19px;font-weight:650;letter-spacing:-.026em}
 .empty p{margin:0 0 20px;font-size:15px;color:var(--label-2);line-height:1.45}
 
@@ -257,14 +257,14 @@ main{padding:0 16px}
 .yrow{display:flex;justify-content:space-between;margin-top:14px;padding-top:13px;border-top:.5px solid var(--sep)}
 .yrow button{font-size:15px;color:var(--accent);font-weight:500}
 
-.goal{position:relative;color:#fff;background:var(--c);border-radius:3px 22px 22px 22px;
-  margin-top:29px;box-shadow:var(--tile-shadow)}
-.goal::before{content:"";position:absolute;top:-12px;left:0;width:108px;height:12px;
-  border-radius:8px 8px 0 0;background:var(--c);box-shadow:inset 0 0 0 99px rgba(0,0,0,.06)}
+.goal{position:relative;color:#fff;background:var(--c);border-radius:4px 22px 22px 22px;
+  margin-top:29px;box-shadow:var(--tile-shadow),inset 0 1.5px 0 rgba(255,255,255,.20)}
+.goal::before{content:"";position:absolute;top:-11px;left:0;width:116px;height:20px;
+  border-radius:8px 10px 0 0;background:var(--c);
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.20)}
 .goal::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-  background:linear-gradient(152deg,rgba(255,255,255,.20),rgba(255,255,255,0) 56%)}
+  background:linear-gradient(180deg,rgba(255,255,255,0) 52%,rgba(0,0,0,.07))}
 .goal.pale{color:rgba(0,0,0,.88)}
-.goal.pale::before{box-shadow:inset 0 0 0 99px rgba(0,0,0,.05)}
 .goal-head{display:block;width:100%;text-align:left;padding:17px 18px 18px;position:relative;z-index:1;color:inherit}
 .goal-head:active{opacity:.9}
 .goal-top{display:flex;align-items:center;gap:10px}
@@ -393,13 +393,13 @@ main{padding:0 16px}
 
 <nav class="tabs" id="tabs">
   <button data-t="month" aria-pressed="true">
-    <svg viewBox="0 0 24 24"><rect x="3.2" y="4.6" width="17.6" height="16.2" rx="3.4"/><path d="M8 2.8v3.6M16 2.8v3.6M3.2 9.6h17.6"/></svg>Месяц</button>
+    <svg viewBox="0 0 24 24"><rect x="3.4" y="5" width="17.2" height="15.6" rx="3.4"/><path d="M8.2 2.9v4M15.8 2.9v4M3.4 9.8h17.2"/></svg>Месяц</button>
   <button data-t="vault" aria-pressed="false">
-    <svg viewBox="0 0 24 24"><rect x="2.8" y="6.4" width="18.4" height="12.6" rx="3"/><path d="M2.8 10.6h18.4M16.8 15.2h.01"/><path d="M6.2 6.4V5.2a2 2 0 0 1 2.6-1.9l9.3 2.9"/></svg>Копилка</button>
+    <svg viewBox="0 0 24 24"><path d="M12 3.2v9.4M8.4 9.2l3.6 3.6 3.6-3.6"/><path d="M3.6 13.4v4.2a3 3 0 0 0 3 3h10.8a3 3 0 0 0 3-3v-4.2"/></svg>Копилка</button>
   <button data-t="history" aria-pressed="false">
-    <svg viewBox="0 0 24 24"><path d="M4 6.5h16M4 12h16M4 17.5h11"/></svg>История</button>
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 6.9V12l3.4 2.1"/></svg>История</button>
   <button data-t="settings" aria-pressed="false">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.1"/><path d="M19.1 14.6a1.5 1.5 0 0 0 .3 1.7l.1.1a1.9 1.9 0 1 1-2.7 2.7l-.1-.1a1.5 1.5 0 0 0-2.6 1.1v.3a1.9 1.9 0 1 1-3.8 0v-.2a1.5 1.5 0 0 0-2.6-1.1l-.1.1a1.9 1.9 0 1 1-2.7-2.7l.1-.1a1.5 1.5 0 0 0-1.1-2.6h-.3a1.9 1.9 0 1 1 0-3.8h.2a1.5 1.5 0 0 0 1.1-2.6l-.1-.1a1.9 1.9 0 1 1 2.7-2.7l.1.1a1.5 1.5 0 0 0 2.6-1.1v-.3a1.9 1.9 0 1 1 3.8 0v.2a1.5 1.5 0 0 0 2.6 1.1l.1-.1a1.9 1.9 0 1 1 2.7 2.7l-.1.1a1.5 1.5 0 0 0 1.1 2.6h.3a1.9 1.9 0 1 1 0 3.8h-.2a1.5 1.5 0 0 0-1.4.9Z"/></svg>Настройки</button>
+    <svg viewBox="0 0 24 24"><path d="M9.84 2.65A9.6 9.6 0 0 1 14.16 2.65L14.15 4.97A7.35 7.35 0 0 1 17.01 6.62L19.02 5.45A9.6 9.6 0 0 1 21.18 9.19L19.16 10.35A7.35 7.35 0 0 1 19.16 13.65L21.18 14.81A9.6 9.6 0 0 1 19.02 18.55L17.01 17.38A7.35 7.35 0 0 1 14.15 19.03L14.16 21.35A9.6 9.6 0 0 1 9.84 21.35L9.85 19.03A7.35 7.35 0 0 1 6.99 17.38L4.98 18.55A9.6 9.6 0 0 1 2.82 14.81L4.84 13.65A7.35 7.35 0 0 1 4.84 10.35L2.82 9.19A9.6 9.6 0 0 1 4.98 5.45L6.99 6.62A7.35 7.35 0 0 1 9.85 4.97L9.84 2.65Z"/><circle cx="12" cy="12" r="3.4"/></svg>Настройки</button>
 </nav>
 
 <div class="scrim" id="scrim"></div>

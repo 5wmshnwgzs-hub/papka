@@ -1,5 +1,5 @@
 /* Папка — офлайн-кэш. Версию менять при каждом обновлении приложения. */
-const V = 'papka-v5';
+const V = 'papka-v8';
 const ASSETS = ['./', './index.html', './manifest.webmanifest',
                 './icon-192.png', './icon-512.png', './icon-maskable.png', './apple-touch-icon.png'];
 
